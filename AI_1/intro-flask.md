@@ -128,7 +128,7 @@ Flask uses the [Jinja template engine](https://jinja.palletsprojects.com/en/2.10
 
 ### Control flow expressions in Jinja
 
-In the above example, `{{ }}` was used to contain a string which was added to the HTML. With Jinja you can add dynamic code by using ``{% start %} and {% end %}``. You can add `if` statements to your HTML templates by using the following:
+In the above example, `{{ }}` was used to contain a string which was added to the HTML. With Jinja you can add dynamic code by using ``{%`` ``%}``. You can add `if` statements to your HTML templates by using the following:
 
 ``` html
 {% if message %}

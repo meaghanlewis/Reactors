@@ -128,7 +128,7 @@ Flask uses the [Jinja template engine](https://jinja.palletsprojects.com/en/2.10
 
 ### Control flow expressions in Jinja
 
-In the above example, `{{ }}` was used to contain a string which was added to the HTML. With Jinja you can add dynamic code. 
+In the above example, `{{ }}` was used to contain a string which was added to the HTML. With Jinja you can add dynamic code. Using the syntax: `'{% %}'`. Note that these tags must have a matching closing tag. 
 You can add `if` statements to your HTML templates by using the following:
 
 ``` html
@@ -156,19 +156,7 @@ def index():
     return render_template("index.html")
 ```
 
-And inside **index.html**:
-
-``` html
-{% with messages = get_flashed_messages() %}
-    {% if messages %}
-        <script type="text/javascript">
-            window.alert("{{ messages[0] }}");
-        </script>
-    {% endif %}
-{% endwith %}
-```
-
-This example assumes that just one error message was flashed, but you can call `flash()` multiple times to queue up several messages and enumerate them with a `{%` for message in messages `%}` statement. For more information on message flashing in Flask, see [Message Flashing](http://flask.pocoo.org/docs/1.0/patterns/flashing/).
+For more information on message flashing in Flask, see [Message Flashing](http://flask.pocoo.org/docs/1.0/patterns/flashing/).
 
 ### Static files
 
